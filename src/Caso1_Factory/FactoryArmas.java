@@ -15,22 +15,18 @@ public class FactoryArmas {
     }
 
     public arma getArma(String solicitud) {
-        herrero herrero = null;
         switch (solicitud.toLowerCase()){
             case "elfo":
-                herrero = new elfosFactory();
-                break;
+                return new elfosFactory().construirArma();
             case "enano":
-                herrero = new enanosFactory();
-                break;
+                return new enanosFactory().construirArma();
             case "orco":
-                herrero = new orcosFactory();
-                break;
+                return new orcosFactory().construirArma();
             case "sauron":
-                herrero = new sauronFactory();
-                break;
+                return new sauronFactory().construirArma();
+                
         }
-        return herrero.construirArma();
+        return new arma("0","Examen");
     }
 
         

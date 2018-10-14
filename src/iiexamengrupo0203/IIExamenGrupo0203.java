@@ -21,7 +21,7 @@ public class IIExamenGrupo0203 {
         //Inicio Caso 1 Factory 
         
         FactoryArmas factory = new FactoryArmas();
-        String solicitud = "elfo";//elfo, enano, orco, sauron
+        String solicitud = "orco";//elfo, enano, orco, sauron
         System.out.println(factory.getArma(solicitud).toString());
         
         //Fin Caso 1 Factory
