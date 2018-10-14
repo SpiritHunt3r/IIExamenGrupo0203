@@ -9,11 +9,11 @@ package Caso1_Factory;
  *
  * @author juan_
  */
-public class elfos implements herrero {
+public class elfosFactory implements herrero {
     
     private arma arma;
 
-    public elfos() {
+    public elfosFactory() {
         this.arma = new arma("Arma Elfica"); 
     }
 

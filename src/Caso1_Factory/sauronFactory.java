@@ -8,13 +8,13 @@ package Caso1_Factory;
 /**
  *
  * @author juan_
- */
-public class orcos implements herrero {
+  */
+public class sauronFactory implements herrero {
     
     private arma arma;
 
-    public orcos() {
-        this.arma = new arma("Arma de Orcos"); 
+    public sauronFactory() {
+        this.arma = new arma("Garrote de Sauron"); 
     }
 
     @Override

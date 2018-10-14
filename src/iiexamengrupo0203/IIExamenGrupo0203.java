@@ -6,7 +6,6 @@
 package iiexamengrupo0203;
 
 import Caso1_Factory.FactoryArmas;
-import Caso1_Factory.arma;
 
 
 /**
@@ -22,10 +21,8 @@ public class IIExamenGrupo0203 {
         //Inicio Caso 1 Factory 
         
         FactoryArmas factory = new FactoryArmas();
-        arma construida;
         String solicitud = "elfo";//elfo, enano, orco, sauron
-        construida = factory.getArma(solicitud);
-        System.out.println(construida.toString());
+        System.out.println(factory.getArma(solicitud).toString());
         
         //Fin Caso 1 Factory
         

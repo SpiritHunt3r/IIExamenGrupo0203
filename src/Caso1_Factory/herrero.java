@@ -9,6 +9,6 @@ package Caso1_Factory;
  *
  * @author juan_
  */
-public interface herrero {
+public abstract interface herrero {
     arma construirArma();
 }

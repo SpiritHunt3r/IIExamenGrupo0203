@@ -11,8 +11,6 @@ package Caso1_Factory;
  */
 public class FactoryArmas {
 
-    arma construida;
-
     public FactoryArmas() {
     }
 
@@ -20,20 +18,19 @@ public class FactoryArmas {
         herrero herrero = null;
         switch (solicitud.toLowerCase()){
             case "elfo":
-                herrero = new elfos();
+                herrero = new elfosFactory();
                 break;
             case "enano":
-                herrero = new enanos();
+                herrero = new enanosFactory();
                 break;
             case "orco":
-                herrero = new orcos();
+                herrero = new orcosFactory();
                 break;
             case "sauron":
-                herrero = new sauron();
+                herrero = new sauronFactory();
                 break;
         }
-        construida = herrero.construirArma();
-        return construida;
+        return herrero.construirArma();
     }
 
         
