@@ -14,7 +14,7 @@ public class orcosFactory implements herrero {
     private arma arma;
 
     public orcosFactory() {
-        this.arma = new arma("Arma de Orcos"); 
+        this.arma = new arma("Espada","Orco"); 
     }
 
     @Override

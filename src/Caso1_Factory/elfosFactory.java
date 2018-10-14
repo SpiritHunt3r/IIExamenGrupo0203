@@ -14,7 +14,7 @@ public class elfosFactory implements herrero {
     private arma arma;
 
     public elfosFactory() {
-        this.arma = new arma("Arma Elfica"); 
+        this.arma = new arma("Daga","Elfos"); 
     }
 
     @Override

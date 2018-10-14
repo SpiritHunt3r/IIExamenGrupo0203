@@ -11,14 +11,16 @@ package Caso1_Factory;
  */
 public class arma {
     private String arma;
+    private String tipo;
     
-    public arma (String arma){
+    public arma (String arma, String tipo){
         this.arma = arma;
+        this.tipo = tipo;
     }
 
     @Override
     public String toString() {
-        return arma;
+        return arma + " de " + tipo;
     }
     
     

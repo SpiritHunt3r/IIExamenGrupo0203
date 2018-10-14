@@ -14,7 +14,7 @@ public class enanosFactory implements herrero {
     private arma arma;
 
     public enanosFactory() {
-        this.arma = new arma("Arma de Enanos"); 
+        this.arma = new arma("Hacha","Enanos"); 
     }
 
     @Override

@@ -14,7 +14,7 @@ public class sauronFactory implements herrero {
     private arma arma;
 
     public sauronFactory() {
-        this.arma = new arma("Garrote de Sauron"); 
+        this.arma = new arma("Garrote","Sauron"); 
     }
 
     @Override
