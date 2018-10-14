@@ -5,12 +5,9 @@
  */
 package iiexamengrupo0203;
 
+import Caso1_Factory.FactoryArmas;
 import Caso1_Factory.arma;
-import Caso1_Factory.elfos;
-import Caso1_Factory.enanos;
-import Caso1_Factory.herrero;
-import Caso1_Factory.orcos;
-import Caso1_Factory.sauron;
+
 
 /**
  *
@@ -24,24 +21,10 @@ public class IIExamenGrupo0203 {
     public static void main(String[] args) {
         //Inicio Caso 1 Factory 
         
-        herrero herrero = null;
+        FactoryArmas factory = new FactoryArmas();
         arma construida;
-        String solicitud = "orco";//elfo, enano, orco, sauron
-        switch (solicitud.toLowerCase()){
-            case "elfo":
-                herrero = new elfos();
-                break;
-            case "enano":
-                herrero = new enanos();
-                break;
-            case "orco":
-                herrero = new orcos();
-                break;
-            case "sauron":
-                herrero = new sauron();
-                break;
-        }
-        construida = herrero.construirArma();
+        String solicitud = "elfo";//elfo, enano, orco, sauron
+        construida = factory.getArma(solicitud);
         System.out.println(construida.toString());
         
         //Fin Caso 1 Factory
