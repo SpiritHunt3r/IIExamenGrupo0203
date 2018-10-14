@@ -23,6 +23,7 @@ public class IIExamenGrupo0203 {
      */
     public static void main(String[] args) {
         //Inicio Caso 1 Factory 
+        
         herrero herrero = null;
         arma construida;
         String solicitud = "orco";//elfo, enano, orco, sauron
@@ -42,6 +43,7 @@ public class IIExamenGrupo0203 {
         }
         construida = herrero.construirArma();
         System.out.println(construida.toString());
+        
         //Fin Caso 1 Factory
         
         
