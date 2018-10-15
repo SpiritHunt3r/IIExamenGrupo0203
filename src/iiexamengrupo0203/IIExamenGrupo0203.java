@@ -52,11 +52,14 @@ public class IIExamenGrupo0203 {
         
         ((Operador) primerOperador).agregarOperando(num1);
         ((Operador) primerOperador).agregarOperando(segundoOperador2);
-        
+        /*
         if(primerOperador.validar()){
             System.out.println(primerOperador.escribir());
         }
         System.out.println(primerOperador.validar());
+        */
+        System.out.println(primerOperador.validar());
+        System.out.println(primerOperador.escribir());
         
         //Expresion 7 * 8 (3 / 2) 
         //Tiene mal formato
@@ -68,18 +71,21 @@ public class IIExamenGrupo0203 {
         ExpresionAritmetica num_3 = new Numero(3);
         ExpresionAritmetica num_4 = new Numero(2);
         
-        ((Operador) op2).agregarOperando(num3);
-        ((Operador) op2).agregarOperando(num4);
+        ((Operador) op2).agregarOperando(num_3);
+        ((Operador) op2).agregarOperando(num_4);
         
-        ((Operador) op1).agregarOperando(num1);
-        ((Operador) op1).agregarOperando(num2);
+        ((Operador) op1).agregarOperando(num_1);
+        ((Operador) op1).agregarOperando(num_2);
         ((Operador) op1).agregarOperando(op2);
         
+        System.out.println(op1.validar());
+        System.out.println(op1.escribir());
+        /*
         if(op1.validar()){
             System.out.println(op1.escribir());
         }
         System.out.println(op1.validar());
-       
+       */
         System.out.println("---------------------------------------------------------");
         //Fin Caso 4 Composite
     }
