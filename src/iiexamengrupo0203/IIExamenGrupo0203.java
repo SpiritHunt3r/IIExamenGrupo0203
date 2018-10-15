@@ -6,7 +6,7 @@
 package iiexamengrupo0203;
 
 import Caso1_Factory.FactoryArmas;
-
+import Caso_4_Composite.*;
 
 /**
  *
@@ -27,7 +27,34 @@ public class IIExamenGrupo0203 {
         //Fin Caso 1 Factory
         
         
+        //Inicio Caso 4 Composite
         
+        //crear expresion 7 + ( ( 5 * 6 ) - 8 )
+        System.out.println("1");
+        ExpresionAritmetica primerOperador = new Operador("+");
+        ExpresionAritmetica segundoOperador1 = new Operador("*");
+        ExpresionAritmetica segundoOperador2 = new Operador("-");
+        ExpresionAritmetica num1 = new Numero(7);
+        ExpresionAritmetica num2 = new Numero(5);
+        ExpresionAritmetica num3 = new Numero(6);
+        ExpresionAritmetica num4 = new Numero(8);
+        
+        ((Operador) segundoOperador1).agregarOperando(num2);
+        ((Operador) segundoOperador1).agregarOperando(num3);
+        
+        ((Operador) segundoOperador2).agregarOperando(segundoOperador1);
+        ((Operador) segundoOperador2).agregarOperando(num4);
+        
+        ((Operador) primerOperador).agregarOperando(num1);
+        ((Operador) primerOperador).agregarOperando(segundoOperador2);
+        
+        if(primerOperador.validar()){
+            System.out.println(primerOperador.escribir());
+        } else System.out.println("false");
+        
+        System.out.println("2");
+        System.out.println(primerOperador.validar());
+        //Fin Caso 4 Composite
     }
     
 }
