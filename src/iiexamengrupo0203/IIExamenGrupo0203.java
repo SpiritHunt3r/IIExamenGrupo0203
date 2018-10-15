@@ -22,7 +22,9 @@ public class IIExamenGrupo0203 {
         
         FactoryArmas factory = new FactoryArmas();
         String solicitud = "orco";//elfo, enano, orco, sauron
+        System.out.println("5");
         System.out.println(factory.getArma(solicitud).toString());
+        System.out.println("4");
         
         //Fin Caso 1 Factory
         
@@ -30,6 +32,7 @@ public class IIExamenGrupo0203 {
         //Inicio Caso 4 Composite
         
         //crear expresion 7 + ( ( 5 * 6 ) - 8 )
+        
         System.out.println("1");
         ExpresionAritmetica primerOperador = new Operador("+");
         ExpresionAritmetica segundoOperador1 = new Operador("*");
@@ -51,8 +54,7 @@ public class IIExamenGrupo0203 {
         if(primerOperador.validar()){
             System.out.println(primerOperador.escribir());
         } else System.out.println("false");
-        
-        System.out.println("2");
+       
         System.out.println(primerOperador.validar());
         //Fin Caso 4 Composite
     }
