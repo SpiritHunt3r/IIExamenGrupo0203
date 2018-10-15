@@ -5,8 +5,10 @@
  */
 package iiexamengrupo0203;
 
+import Caso4_Composite.ExpresionAritmetica;
+import Caso4_Composite.Operador;
+import Caso4_Composite.Numero;
 import Caso1_Factory.FactoryArmas;
-import Caso_4_Composite.*;
 
 /**
  *
@@ -22,9 +24,9 @@ public class IIExamenGrupo0203 {
         
         FactoryArmas factory = new FactoryArmas();
         String solicitud = "orco";//elfo, enano, orco, sauron
-        System.out.println("5");
+        System.out.println("Resultado Caso 1: ");
         System.out.println(factory.getArma(solicitud).toString());
-        System.out.println("4");
+        System.out.println("---------------------------------------------------------");
         
         //Fin Caso 1 Factory
         
@@ -33,7 +35,7 @@ public class IIExamenGrupo0203 {
         
         //crear expresion 7 + ( ( 5 * 6 ) - 8 )
         
-        System.out.println("1");
+        System.out.println("Resultado Caso 4: ");
         ExpresionAritmetica primerOperador = new Operador("+");
         ExpresionAritmetica segundoOperador1 = new Operador("*");
         ExpresionAritmetica segundoOperador2 = new Operador("-");
@@ -55,7 +57,7 @@ public class IIExamenGrupo0203 {
             System.out.println(primerOperador.escribir());
         } else System.out.println("false");
        
-        System.out.println(primerOperador.validar());
+        System.out.println("---------------------------------------------------------");
         //Fin Caso 4 Composite
     }
     
