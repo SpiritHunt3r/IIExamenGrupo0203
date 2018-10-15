@@ -9,6 +9,6 @@ package Caso1_Factory;
  *
  * @author juan_
  */
-public abstract interface herrero {
-    arma construirArma();
+public enum Raza {
+    Elfo,Enano,Orco,Sauron
 }

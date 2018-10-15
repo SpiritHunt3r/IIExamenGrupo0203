@@ -9,18 +9,19 @@ package Caso1_Factory;
  *
  * @author juan_
  */
-public class arma {
-    private String arma;
-    private String tipo;
-    
-    public arma (String arma, String tipo){
-        this.arma = arma;
-        this.tipo = tipo;
+public class ArmaElfo extends Arma{
+
+    public ArmaElfo() {
+        super(null, null);
+    }
+   
+    public ArmaElfo(ArmaType arma) {
+        super(Raza.Elfo, arma);
     }
 
     @Override
     public String toString() {
-        return arma + " de " + tipo;
+        return "Elfica " + super.toString() + "\n" ;
     }
     
     

@@ -9,17 +9,11 @@ package Caso1_Factory;
  *
  * @author juan_
  */
-public class enanosFactory implements herrero {
+public class enanosFactory  extends FactoryArmas{
     
-    private arma arma;
-
-    public enanosFactory() {
-        this.arma = new arma("Hacha","Enanos"); 
+    public static Arma getArma(ArmaType arma){
+        return new ArmaEnano(arma);
     }
-
-    @Override
-    public arma construirArma() {
-        return this.arma;
-    }
-    
+            
 }
+

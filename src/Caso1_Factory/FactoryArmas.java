@@ -14,24 +14,17 @@ public class FactoryArmas {
     public FactoryArmas() {
     }
 
-    public arma getArma(String solicitud) {
-        switch (solicitud.toLowerCase()){
-            case "elfo":
-                return new elfosFactory().construirArma();
-            case "enano":
-                return new enanosFactory().construirArma();
-            case "orco":
-                return new orcosFactory().construirArma();
-            case "sauron":
-                return new sauronFactory().construirArma();
-                
+    public static Arma getArma(Raza raza, ArmaType tipo) {
+        Arma a = null ;
+        switch (raza){
+            case Elfo :     a = new ArmaElfo(tipo); break;
+            case Enano :   a = new ArmaEnano(tipo); break;
+            case Orco:     a = new ArmaOrco(tipo); break;
+            case Sauron:     a = new ArmaSauron(tipo); break;
+            
         }
-        return new arma("0","Examen");
+        return a;
     }
-
-        
-    
-    
         
     
     

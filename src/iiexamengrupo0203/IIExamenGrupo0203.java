@@ -5,10 +5,12 @@
  */
 package iiexamengrupo0203;
 
+import Caso1_Factory.ArmaType;
 import Caso4_Composite.ExpresionAritmetica;
 import Caso4_Composite.Operador;
 import Caso4_Composite.Numero;
 import Caso1_Factory.FactoryArmas;
+import Caso1_Factory.Raza;
 
 /**
  *
@@ -23,9 +25,10 @@ public class IIExamenGrupo0203 {
         //Inicio Caso 1 Factory 
         
         FactoryArmas factory = new FactoryArmas();
-        String solicitud = "orco";//elfo, enano, orco, sauron
+        ArmaType arma = ArmaType.Daga;
+        Raza tipo = Raza.Enano;
         System.out.println("Resultado Caso 1: ");
-        System.out.println(factory.getArma(solicitud).toString());
+        System.out.println(factory.getArma(tipo,arma).toString());
         System.out.println("---------------------------------------------------------");
         
         //Fin Caso 1 Factory

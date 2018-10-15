@@ -9,17 +9,11 @@ package Caso1_Factory;
  *
  * @author juan_
  */
-public class orcosFactory implements herrero {
+public class orcosFactory  extends FactoryArmas{
     
-    private arma arma;
-
-    public orcosFactory() {
-        this.arma = new arma("Espada","Orco"); 
+    public static Arma getArma(ArmaType arma){
+        return new ArmaOrco(arma);
     }
-
-    @Override
-    public arma construirArma() {
-        return this.arma;
-    }
-    
+            
 }
+

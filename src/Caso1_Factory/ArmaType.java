@@ -8,12 +8,7 @@ package Caso1_Factory;
 /**
  *
  * @author juan_
-  */
-public class sauronFactory  extends FactoryArmas {
-    
-    public static Arma getArma(ArmaType arma){
-        return new ArmaSauron(arma);
-    }
-    
-    
+ */
+public enum ArmaType {
+    Daga,Martillo,Mazo,Garrote,Arco,Espada,Hacha,Maza,Ballesta,Pica,Mangual
 }
