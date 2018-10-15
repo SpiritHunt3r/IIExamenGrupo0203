@@ -33,7 +33,7 @@ public class IIExamenGrupo0203 {
         
         //Inicio Caso 4 Composite
         
-        //crear expresion 7 + ( ( 5 * 6 ) - 8 )
+        //Expresion 7 + ( ( 5 * 6 ) - 8 )
         
         System.out.println("Resultado Caso 4: ");
         ExpresionAritmetica primerOperador = new Operador("+");
@@ -55,7 +55,30 @@ public class IIExamenGrupo0203 {
         
         if(primerOperador.validar()){
             System.out.println(primerOperador.escribir());
-        } else System.out.println("false");
+        }
+        System.out.println(primerOperador.validar());
+        
+        //Expresion 7 * 8 (3 / 2) 
+        //Tiene mal formato
+        
+        ExpresionAritmetica op1 = new Operador("*");
+        ExpresionAritmetica op2 = new Operador("/");
+        ExpresionAritmetica num_1 = new Numero(7);
+        ExpresionAritmetica num_2 = new Numero(8);
+        ExpresionAritmetica num_3 = new Numero(3);
+        ExpresionAritmetica num_4 = new Numero(2);
+        
+        ((Operador) op2).agregarOperando(num3);
+        ((Operador) op2).agregarOperando(num4);
+        
+        ((Operador) op1).agregarOperando(num1);
+        ((Operador) op1).agregarOperando(num2);
+        ((Operador) op1).agregarOperando(op2);
+        
+        if(op1.validar()){
+            System.out.println(op1.escribir());
+        }
+        System.out.println(op1.validar());
        
         System.out.println("---------------------------------------------------------");
         //Fin Caso 4 Composite
