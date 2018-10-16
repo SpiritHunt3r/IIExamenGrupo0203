@@ -9,6 +9,13 @@ package Caso3_Bridge;
  *
  * @author ayma-93
  */
-public class PreemptiveThreadScheduler {
+public class PreemptiveThreadScheduler extends ThreadScheduler {
     
+    public PreemptiveThreadScheduler(Sistema_Operativo SO) {
+        super(SO);
+    }
+    
+    public String Info(){
+        return SO.function() + "\nProcesando en Preemptive Scheduler";
+    }
 }

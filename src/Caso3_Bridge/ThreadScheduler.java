@@ -9,6 +9,14 @@ package Caso3_Bridge;
  *
  * @author ayma-93
  */
-public class ThreadScheduler {
+public abstract class ThreadScheduler {
+    protected Sistema_Operativo SO;
+
+    public ThreadScheduler(Sistema_Operativo SO) {
+        this.SO = SO;
+    }
     
+    public String Info(){
+        return null;
+    }
 }

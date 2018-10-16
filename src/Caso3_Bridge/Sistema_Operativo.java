@@ -9,6 +9,6 @@ package Caso3_Bridge;
  *
  * @author ayma-93
  */
-interface ThreadScheduler_Implementation {
-    
+public abstract interface Sistema_Operativo {
+    String function();
 }

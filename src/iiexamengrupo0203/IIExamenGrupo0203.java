@@ -11,6 +11,12 @@ import Caso4_Composite.Operador;
 import Caso4_Composite.Numero;
 import Caso1_Factory.FactoryArmas;
 import Caso1_Factory.Raza;
+import Caso3_Bridge.JVMTS;
+import Caso3_Bridge.PreemptiveThreadScheduler;
+import Caso3_Bridge.Sistema_Operativo;
+import Caso3_Bridge.TimeSlicedThreadScheduler;
+import Caso3_Bridge.UnixTS;
+import Caso3_Bridge.WindowsTS;
 
 /**
  *
@@ -33,6 +39,26 @@ public class IIExamenGrupo0203 {
         
         //Fin Caso 1 Factory
         
+        
+        
+        //Inicio Caso 3 Bridge
+        
+        System.out.println("Resultado Caso 3: ");
+        Sistema_Operativo windows = new WindowsTS();
+        Sistema_Operativo unix = new UnixTS();
+        Sistema_Operativo java = new JVMTS();
+        
+        TimeSlicedThreadScheduler TsTS = new TimeSlicedThreadScheduler(unix);
+        PreemptiveThreadScheduler PTS = new PreemptiveThreadScheduler(windows);
+        TimeSlicedThreadScheduler TsTS1 = new TimeSlicedThreadScheduler(java);
+        
+        System.out.println(TsTS.Info());
+        System.out.println(PTS.Info());
+        System.out.println(TsTS1.Info());
+        System.out.println();
+        
+        System.out.println("---------------------------------------------------------");
+        //Fin Caso 3 Bridge
         
         //Inicio Caso 4 Composite
         
@@ -89,6 +115,7 @@ public class IIExamenGrupo0203 {
         }
         System.out.println(op1.validar());
        */
+        System.out.println();
         System.out.println("---------------------------------------------------------");
         //Fin Caso 4 Composite
     }

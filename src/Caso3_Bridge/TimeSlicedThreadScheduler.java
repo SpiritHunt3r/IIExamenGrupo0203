@@ -9,6 +9,14 @@ package Caso3_Bridge;
  *
  * @author ayma-93
  */
-public class TimeSlicedThreadScheduler {
+public class TimeSlicedThreadScheduler extends ThreadScheduler  {
+    
+    public TimeSlicedThreadScheduler(Sistema_Operativo SO) {
+        super(SO);
+    }
+    
+    public String Info(){
+        return SO.function() + "\nProcesando en Time Sliced Scheduler";
+    }
     
 }

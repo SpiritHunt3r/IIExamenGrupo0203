@@ -9,6 +9,11 @@ package Caso3_Bridge;
  *
  * @author ayma-93
  */
-public class WindowsTS {
+public class WindowsTS implements Sistema_Operativo {
+
+    @Override
+    public String function() {
+        return "Sistema Operativo WindowsTS";
+    }
     
 }

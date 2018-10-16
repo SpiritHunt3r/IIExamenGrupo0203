@@ -9,6 +9,11 @@ package Caso3_Bridge;
  *
  * @author ayma-93
  */
-public class JVMTS {
+public class JVMTS implements Sistema_Operativo {
+
+    @Override
+    public String function() {
+        return "Sistema Operativo JVMTS";
+    }
     
 }
