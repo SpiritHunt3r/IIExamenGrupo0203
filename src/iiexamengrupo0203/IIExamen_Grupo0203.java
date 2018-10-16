@@ -23,7 +23,7 @@ import Caso3_Bridge.WindowsTS;
  *
  * @author juan_
  */
-public class IIExamenGrupo0203 {
+public class IIExamen_Grupo0203 {
 
     /**
      * @param args the command line arguments
