@@ -14,6 +14,7 @@ import Caso1_Factory.Raza;
 import Caso3_Bridge.JVMTS;
 import Caso3_Bridge.PreemptiveThreadScheduler;
 import Caso3_Bridge.Sistema_Operativo;
+import Caso3_Bridge.ThreadScheduler;
 import Caso3_Bridge.TimeSlicedThreadScheduler;
 import Caso3_Bridge.UnixTS;
 import Caso3_Bridge.WindowsTS;
@@ -30,11 +31,22 @@ public class IIExamenGrupo0203 {
     public static void main(String[] args) {
         //Inicio Caso 1 Factory 
         
+        System.out.println("Resultado Caso 1: \n");
+        
         FactoryArmas factory = new FactoryArmas();
+        
         ArmaType arma = ArmaType.Daga;
-        Raza tipo = Raza.Enano;
-        System.out.println("Resultado Caso 1: ");
+        Raza tipo = Raza.Enano;                
         System.out.println(factory.getArma(tipo,arma).toString());
+        
+        arma = ArmaType.Arco;
+        tipo = Raza.Elfo;        
+        System.out.println(factory.getArma(tipo,arma).toString());
+        
+        arma = ArmaType.Mazo;
+        tipo = Raza.Orco;
+        System.out.println(factory.getArma(tipo,arma).toString());
+        
         System.out.println("---------------------------------------------------------");
         
         //Fin Caso 1 Factory
@@ -43,14 +55,14 @@ public class IIExamenGrupo0203 {
         
         //Inicio Caso 3 Bridge
         
-        System.out.println("Resultado Caso 3: ");
+        System.out.println("Resultado Caso 3: \n");
         Sistema_Operativo windows = new WindowsTS();
         Sistema_Operativo unix = new UnixTS();
         Sistema_Operativo java = new JVMTS();
         
-        TimeSlicedThreadScheduler TsTS = new TimeSlicedThreadScheduler(unix);
-        PreemptiveThreadScheduler PTS = new PreemptiveThreadScheduler(windows);
-        TimeSlicedThreadScheduler TsTS1 = new TimeSlicedThreadScheduler(java);
+        ThreadScheduler TsTS = new TimeSlicedThreadScheduler(unix);
+        ThreadScheduler PTS = new PreemptiveThreadScheduler(windows);
+        ThreadScheduler TsTS1 = new TimeSlicedThreadScheduler(java);
         
         System.out.println(TsTS.Info());
         System.out.println(PTS.Info());
@@ -64,7 +76,7 @@ public class IIExamenGrupo0203 {
         
         //Expresion 7 + ( ( 5 * 6 ) - 8 )
         
-        System.out.println("Resultado Caso 4: ");
+        System.out.println("Resultado Caso 4: \n");
         ExpresionAritmetica primerOperador = new Operador("+");
         ExpresionAritmetica segundoOperador1 = new Operador("*");
         ExpresionAritmetica segundoOperador2 = new Operador("-");
@@ -109,12 +121,7 @@ public class IIExamenGrupo0203 {
         
         System.out.println(op1.validar());
         System.out.println(op1.escribir());
-        /*
-        if(op1.validar()){
-            System.out.println(op1.escribir());
-        }
-        System.out.println(op1.validar());
-       */
+
         System.out.println();
         System.out.println("---------------------------------------------------------");
         //Fin Caso 4 Composite

@@ -15,6 +15,7 @@ public class TimeSlicedThreadScheduler extends ThreadScheduler  {
         super(SO);
     }
     
+    @Override
     public String Info(){
         return SO.function() + "\nProcesando en Time Sliced Scheduler";
     }

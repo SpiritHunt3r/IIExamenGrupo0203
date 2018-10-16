@@ -10,5 +10,5 @@ package Caso3_Bridge;
  * @author ayma-93
  */
 public abstract interface Sistema_Operativo {
-    String function();
+    public String function();
 }

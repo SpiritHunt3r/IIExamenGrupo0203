@@ -9,7 +9,7 @@ package Caso3_Bridge;
  *
  * @author ayma-93
  */
-public abstract class ThreadScheduler {
+public class ThreadScheduler {
     protected Sistema_Operativo SO;
 
     public ThreadScheduler(Sistema_Operativo SO) {

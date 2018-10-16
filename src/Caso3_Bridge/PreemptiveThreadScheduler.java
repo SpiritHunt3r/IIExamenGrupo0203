@@ -15,6 +15,7 @@ public class PreemptiveThreadScheduler extends ThreadScheduler {
         super(SO);
     }
     
+    @Override
     public String Info(){
         return SO.function() + "\nProcesando en Preemptive Scheduler";
     }
